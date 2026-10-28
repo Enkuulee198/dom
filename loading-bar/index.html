@@ -5,57 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loading · Forma</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    <div
-      class="h-screen bg-[#190B10] flex justify-center items-center flex-col"
-    >
-      <div
-        class="text-[#C4A2AB] w-[230px] h-[12px] font-[Inter] font-medium text-[10px] leading-none tracking-[3px] mb-[24px]"
+  <body
+    class="min-h-screen min-w-[1000px] bg-[#190b10] font-sans text-[#fff5ee]"
+  >
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#ff9299]/10"
       >
-        — LET’S GET YOU STARTED —
-      </div>
-      <div
-        class="w-[720px] h-[456px] bg-[#260F17] rounded-[15px] pl-[48px] border border-[#46232E]"
-      >
-        <div class="flex justify-between mt-[48px] mr-[48px]">
-          <div
-            class="font-[Inter] font-[600px] text-[13px] Semi-Bold text-[#FF9299]"
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#ff9299]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#ff9299] transition-colors hover:border-[#ff9299]/35 hover:bg-[#ff9299]/10 hover:text-[#fff5ee] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff9299] motion-reduce:transition-none"
           >
-            GETTING READY
-          </div>
-          <div class="text-[#FF9299] text-[13px]">01 — 03</div>
-        </div>
-        <div
-          class="w-[500px] h-[48px] text-[40px] font-[Inter] mt-[28px] font-semibold tracking-[0.5px] text-white"
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#ff9299]/65"
+          >The everyday collection / 01</span
         >
-          Something good is coming.
-        </div>
-        <div class="text-[#C4A2AB] text-[15px] mt-[12px]">
-          A little preparation for a great beginning.
-        </div>
-        <div class="flex">
-          <div class="text-white text-[112px]">64</div>
-          <div class="text-[#FF6470] text-[38px] ml-[8px] mt-[82px]">%</div>
-        </div>
-        <div class="bg-[#46232E] rounded-[9999px] w-[624px] h-[12px]">
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <!-- Endees ehel -->
+        <div
+          class="h-screen bg-[#190B10] flex justify-center items-center flex-col"
+        >
           <div
-            class="bg-[#EF3340] w-[399.36px] h-[12px] rounded-[9999px]"
-          ></div>
-        </div>
-        <div class="flex justify-between mr-[48px] mt-[12px]">
-          <div class="text-[#C4A2AB] text-[10px] regular font-[inter]">
-            PREPARING YOUR EXPERIENCE
+            class="text-[#C4A2AB] w-[230px] h-[12px] font-[Inter] font-medium text-[10px] leading-none tracking-[3px] mb-[24px]"
+          >
+            — LET’S GET YOU STARTED —
           </div>
-          <div class="text-[#C4A2AB] text-[10px] regular font-[inter]">
-            JUST A MOMENT
+          <div
+            class="w-[720px] h-[456px] bg-[#260F17] rounded-[15px] pl-[48px] border border-[#46232E]"
+          >
+            <div class="flex justify-between mt-[48px] mr-[48px]">
+              <div
+                class="font-[Inter] font-[600px] text-[13px] Semi-Bold text-[#FF9299]"
+              >
+                GETTING READY
+              </div>
+              <div class="text-[#FF9299] text-[13px]">01 — 03</div>
+            </div>
+            <div
+              class="w-[500px] h-[48px] text-[40px] font-[Inter] mt-[28px] font-semibold tracking-[0.5px] text-white"
+            >
+              Something good is coming.
+            </div>
+            <div class="text-[#C4A2AB] text-[15px] mt-[14px]">
+              A little preparation for a great beginning.
+            </div>
+            <div
+              class="flex mt-[12px] justify-between w-[624px] h-[136px] items-center"
+            >
+              <div id="counter" class="text-white text-[112px]">64</div>
+              <div class="text-[#FF6470] text-[38px] mt-[60px]">%</div>
+              <div
+                id="message"
+                class="text-[14px] text-[#C4A2AB] mr-[48px] ml-auto"
+              >
+                Bringing everything together
+              </div>
+            </div>
+            <div
+              class="bg-[#46232E] rounded-[9999px] w-[624px] h-[12px] mt-[18px]"
+            >
+              <div
+                id="loading-bar"
+                class="bg-[#EF3340] w-[400px] h-[12px] rounded-[9999px] transition-[width] duration-100 ease-linear"
+              ></div>
+            </div>
+            <div class="flex justify-between mr-[48px] mt-[12px]">
+              <div class="text-[#C4A2AB] text-[10px] regular font-[Inter]">
+                PREPARING YOUR EXPERIENCE
+              </div>
+              <div class="text-[#C4A2AB] text-[10px] regular font-[Inter]">
+                JUST A MOMENT
+              </div>
+            </div>
+            <div
+              class="bg-[#1E0C13] w-[718px] h-[56px] rounded rounded-bl-[15px] ml-[-48px] rounded-br-[15px] mt-[12px] text-[#C4A2AB] text-[12px] flex justify-center items-center"
+            >
+              → Your welcome page will open automatically.
+            </div>
           </div>
-        </div>
-        <div
-          class="bg-[#1E0C13] w-[718px] h-[58px] rounded rounded-bl-[15px] ml-[-48px] rounded-br-[15px] mt-[10px] text-[#C4A2AB] text-[12px] flex justify-center items-center"
-        >
-          → Your welcome page will open automatically.
         </div>
       </div>
     </div>
