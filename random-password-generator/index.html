@@ -6,6 +6,7 @@
     <title>Password generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet"/>
   </head>
 
   <body class="min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]">
@@ -36,20 +37,30 @@
 
   <div class="flex flex-1 items-center justify-center py-10">
       <!-- Endees ehel -->
-
-
     <div class="bg-[#101B16] h-screen flex items-center justify-center">
-      <div class="w-[520px] h-[571px] bg-[#192B22] rounded-[24px]">
-        <div class="text-[#F0FDF4] w-[273px] h-[34px] text-[28px] font-[inter] font-semibold leading-none tracking-normal">Password generator</div>
-        <div class="w-[235px] h-[17px] text-[#A4B9AD] font-[inter] font-normal text-[14px] leading-none tracking-normal">A strong password. One click away.</div>
-        <div class="w-[85px] h-[15px] text-[#A4B9AD] font-[inter] text-[12px] font-normal leading-none tracking-normal">Your password</div>
-        <div class="bg-[#101B16] w-[448px] h-[64px] rounded-[12px] border border-[1px]"></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
+      <div class="w-[520px] h-[571px] bg-[#192B22] rounded-[24px] pl-[36px]">
+        <div class="w-[44px] h-[44px] rounded-[12px] bg-[#4ADE8026] flex justify-center items-center mt-[36px]">
+          <div><img src="./Frame.svg" alt="logo"></div>
+        </div>
+        <div class="text-[#F0FDF4] w-[273px] h-[34px] text-[28px] font-[inter] font-semibold leading-none tracking-normal mt-[24px]">Password generator</div>
+        <div class="w-[250px] h-[17px] text-[#A4B9AD] font-[inter] font-normal text-[14px] leading-none tracking-normal mt-[8px]">A strong password. One click away.</div>
+        <div class="w-[85px] h-[15px] text-[#A4B9AD] font-[inter] text-[12px] font-normal leading-none tracking-normal mt-[32px]">Your password</div>
+        <div class="bg-[#101B16] w-[448px] h-[64px] rounded-[12px] border mt-[12px] flex items-center justify-between pl-[16px] pr-[16px]">
+        <input id="show-generated-password" type="text" readonly value="random"class="w-[300px] bg-transparent text-[#BBF7D0] text-[18px] font-['Roboto_Mono'] outline-none"/>
+         <button id="copy-generated-password" class="w-[55px] h-[31px] bg-[#FFFFFF0D] rounded-[8px] flex justify-center items-center cursor-pointer">Copy</button>
+        </div>
+        <div id="message" class="text-[12px] w-[230px] h-[15px] mt-[12px] text-[#A4B9AD]">Uses letters, numbers, and symbols.</div>
+        <div class="flex justify-between pr-[36px] pt-[24px]">
+          <div class="">Password length</div>
+          <div id="password-length-output" class="text-[#86EFAC] w-[22px] h-[24px] text-[18px]">16</div>
+        </div>
+        <input id="password-length-range-input" type="range" min="8" max="24" value="16" class="mt-4 w-[448px] cursor-pointer accent-[#4ADE80]" />
+        <div class="flex justify-between mt-[11px] pr-[36px] text-[12px] text-[#8AA294]">
+          <div>8</div>
+          <div>24</div>
+        </div>
+        <button id="generate-password" class="mt-[28px] w-[448px] h-[48px] rounded-[12px] bg-[#4ADE80] text-[#102418] font-[Inter] font-semibold text-[14px] leading-[100%] tracking-[0%] flex justify-center items-center">Generate password</button>
+        <div class="mt-[20px] font-[Inter] font-normal text-[12px] leading-[100%] tracking-normal text-[#8AA294] ml-[118px]">Generated in your browser. Never saved. </div>
       </div>
     </div>
   </div>
