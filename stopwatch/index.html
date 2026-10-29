@@ -5,9 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    Stopwatch
+  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+      </header>
+      
+<div class="flex flex-1 items-center justify-center py-10">
+        <!-- Endees ehel -->
+         <div class="w-[551px] h-[620px] rounded-[28px] bg-[#19231E8C] border border-[1px] border-[#FFFFFF26] p-[40px]">
+           <div class="flex justify-between">
+             <div class="w-[44px] h-[44px] rounded-[12px] bg-[#B5CBB21A] flex justify-center items-center">
+               <div><img src="Frame.png" alt=""></div>
+             </div>
+             <div class="flex items-center justify-center w-[62px] h-[29px] rounded-[99px] bg-[#B5CBB20D] border border-[1px] border-[#C5D9BD26] class="font-[Inter] font-medium text-[12px] leading-none tracking-normal text-[#C5D9BD]>Ready</div>
+           </div>
+           <div class="w-[195px] h-[60px] font-[Inter] font-normal text-[40px] leading-[60px] tracking-[-1px] text-[#F0FDF4] mt-[28px]">Stopwatch</div>
+           <div class="w-[230px] h-[17px] text-[#A4B9AD] font-[Inter] font-normal text[14px] leading-none tracking-normal mt-[8px]">Make time for what matters.</div>
+           <div class="w-[460px] h-[1px] bg-[#B5CBB226] mt-[36px]"></div>
+           <div class="pt-[36px] flex">
+              <div class="w-[166.57px] h-[86px] flex items-center flex-col">
+                <div class="w-[66px] h-[56px] font-['Roboto_Mono'] font-light text-[56px] leading-[56px] tracking-[-2px] text-[#EDF3E8]">00</div>
+                <div class="mt-[16px] font-[Inter] font-medium text-[9px] leading-none tracking-[2px] text-[#9BAD9E]">HOURS</div>
+              </div>
+              <div class="w-[56px] h-[25px] ont-['Roboto_Mono'] font-normal text-[40px] leading-[56px] tracking-normal text-[#5C7161]">:</div>
+              <div class="w-[166.57px] h-[86px] flex items-center flex-col">
+                <div class="w-[66px] h-[56px] font-['Roboto_Mono'] font-light text-[56px] leading-[56px] tracking-[-2px] text-[#EDF3E8]">00</div>
+                <div class="mt-[16px] font-[Inter] font-medium text-[9px] leading-none tracking-[2px] text-[#9BAD9E]">MINUTES</div>
+              </div>
+               <div class="w-[56px] h-[25px] ont-['Roboto_Mono'] font-normal text-[40px] leading-[56px] tracking-normal text-[#5C7161]">:</div>
+              <div class="w-[166.57px] h-[86px] flex items-center flex-col">
+                <div class="w-[66px] h-[56px] font-['Roboto_Mono'] font-light text-[56px] leading-[56px] tracking-[-2px] text-[#EDF3E8]">00</div>
+                <div class="mt-[16px] font-[Inter] font-medium text-[9px] leading-none tracking-[2px] text-[#9BAD9E]">SECONDS</div>
+              </div>
+           </div>
+           <div class="w-[460px] h-[1px] bg-[#B5CBB226] mt-[36px]"></div>
+           <div class="buttons">
+            <div class="">Start</div>
+            <div class="">Pause</div>
+            <div class="">Reset</div>
+           </div>
+           <div class="text">A moment of focus. At your own pace.</div>
+         </div>
+      </div>
+    </div>
   </body>
-</html>
+</html> 

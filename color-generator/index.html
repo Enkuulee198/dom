@@ -5,9 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Palette Generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    Color Generator
+  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+    <div class="mx-auto flex min-h-screen w-[1240px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
+      </header>
+     
+      <div class="pl-[100px]">
+        <!-- Endees ehel --> 
+         <div class="flex pt-[40px] pr-[100px] justify-between">
+            <div class="w-[214px] h-[36px] text-[#F4F4F5] font-[Inter] font-semibold text-[30px] leading-none tracking-normal">Color palettes.</div>
+            <button class="w-[186px] h-[48px] rounded-[12px] bg-[#D9F99D] flex items-center justify-center gap-[8px]">
+                   <div><img src="Frame.png" alt="logo"></div>
+                   <div class="text-[#09090B] w-[108px] h-[17px] font-[Inter]  font-semibold text-[14px] leading-[100%] tracking-[0%] mt-[2.5px]">Shuffle palettes</div>
+            </button>
+         </div>
+         <div class="font-[Inter] font-normal text-[14px] leading-none tracking-normal w-[620px] h-[17px] text-[#A1A1AA] mt-[12px]" >Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
+      </div>
+    </div>
   </body>
-</html>
+</html> 
