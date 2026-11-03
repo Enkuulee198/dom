@@ -6,7 +6,94 @@
     <meta name="theme-color" content="#f5f3ee" />
     <title>Analog Clock · A moment in time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
+  <body
+    class="relative isolate min-h-screen min-w-[1000px] bg-[#f5f3ee] font-sans text-[#253b35] antialiased selection:bg-[#dbe4d6]"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)]"
+    ></div>
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#253b35]/10"
+      >
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#253b35]/10 bg-white/60 px-4 py-2.5 text-xs font-medium text-[#52675c] transition-colors hover:border-[#253b35]/25 hover:bg-white hover:text-[#253b35] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#52675c]"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#748174]"
+          >The everyday collection / 05</span
+        >
+      </header>
 
-  <body>Analog clock</body>
+      <div class="flex flex-1 items-center justify-center py-10">
+        <!-- Endees ehel -->
+        <div class="Clock flex flex-col justify-center items-center gap-[15px]">
+          <p
+            class="font-['Inter'] font-semibold text-[12px] leading-[100%] tracking-[3.5px] text-[#7B887C]"
+          >
+            --- A MOMENT IN TIME ---
+          </p>
+          <p class="text-[40px] text-[black]">A quieter way to keep time.</p>
+          <p class="text-[12px] mt-[-10px]">Slow down. Let the seconds find</p>
+          <div
+            class="w-[392px] h-[392px] bg-[#E9E7DF] rounded-[50%] flex justify-center items-center"
+          >
+            <div
+              class="relative w-[360px] h-[360px] rounded-[50%] bg-[#FCFBF7] border-[1px] border-[#D8DBD1]"
+            >
+              <div id="markers" class="absolute inset-0"></div>
+              <div
+                id="numbers"
+                class="absolute inset-0 font-serif text-xl sm:text-2xl"
+              ></div>
+
+              <div
+                id="second-zuu"
+                class="second w-[2px] h-[120px] bg-[#C47E57] absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded-full"
+              ></div>
+
+              <div
+                id="minute-zuu"
+                class="minute w-[4px] h-[100px] bg-[#253B35] absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded-full"
+              ></div>
+
+              <div
+                id="hour-zuu"
+                class="hour w-[7px] h-[80px] bg-[#253B35] absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded-full"
+              ></div>
+
+              <div
+                class="w-[12px] h-[12px] bg-[#C47E57] absolute bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-full border-[2px] border-[#FCFBF7]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer
+        class="flex h-16 shrink-0 items-center justify-between border-t border-[#253b35]/10 text-[10px] text-[#748174]"
+      >
+        <span>Every second, thoughtfully measured.</span
+        ><span class="font-mono tracking-[2px]">ANALOG / LIVE</span>
+      </footer>
+    </div>
+  </body>
 </html>
