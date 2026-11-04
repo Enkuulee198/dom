@@ -51,6 +51,8 @@ const pauseTime = () => {
 
 const resetTime = () => {
   clearInterval(intervalid);
+  startTime = 0;
+  formatTime(startTime);
 
   startButton.disabled = false;
   pauseButton.disabled = true;

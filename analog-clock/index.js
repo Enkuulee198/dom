@@ -41,7 +41,7 @@ for (let i = 1; i <= 12; i++) {
 }
 
 // Цагийг ажиллуулах
-const runtime = () => {
+  const runtime = () => {
   const now = new Date();
 
   const ms = now.getMilliseconds();

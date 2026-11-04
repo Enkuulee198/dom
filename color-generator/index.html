@@ -1,30 +1,31 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Palette Generator</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body
-    class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]"
-  >
-    <div class="mx-auto flex min-h-screen w-[1240px] flex-col">
-      <header
-        class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10"
-      >
+  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+    <div id="container" class="mx-auto flex min-h-screen w-[1240px] flex-col">
+
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10 transition-all duration-500 hover:border-[#D9F99D]/40">
         <nav>
           <a
             href="../index.html"
-            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-all duration-300 hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
           >
             <svg
               width="15"
@@ -41,59 +42,67 @@
             Back to projects
           </a>
         </nav>
-        <span
-          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65"
-          >The everyday collection / 03</span
-        >
+
+        <span class="color-animation text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">
+          The everyday collection / 03
+        </span>
       </header>
 
-      <!-- Endees ehel -->
-      <div class="flex pt-[40px] justify-between">
+      <div class="flex justify-between pt-[40px]">
         <div
-          class="w-[214px] h-[36px] text-[#F4F4F5] font-[Inter] font-semibold text-[30px] leading-none tracking-normal"
+          class="color-animation w-[214px] h-[36px] font-[Inter] font-semibold text-[30px] leading-none text-[#F4F4F5] tracking-normal transition-all duration-500 ease-in-out hover:text-[#D9F99D] hover:tracking-wide hover:drop-shadow-[0_0_12px_#D9F99D]"
         >
           Color palettes.
         </div>
+
         <button
-          class="w-[186px] h-[48px] rounded-[12px] bg-[#D9F99D] flex items-center justify-center gap-[8px]"
+          id="shuffle-colors"
+          class="w-[186px] h-[48px] rounded-[12px] bg-[#D9F99D] flex items-center justify-center gap-[8px] transition-all duration-300 ease-in-out hover:bg-[#A3E635] hover:scale-105 hover:shadow-[0_0_25px_#D9F99D66] active:scale-90 active:brightness-90"
         >
-          <div><img src="Frame.png" alt="logo" /></div>
-          <div
-            class="text-[#09090B] w-[108px] h-[17px] font-[Inter] font-semibold text-[14px] leading-[100%] tracking-[0%] mt-[2.5px]"
-          >
-            Shuffle palettes
+          <div>
+            <img
+              src="Frame.png"
+              alt="logo"
+              class="transition-transform duration-500 hover:rotate-180"
+            />
           </div>
+
+          <div>Shuffle palettes</div>
         </button>
       </div>
+
       <div
-        class="font-[Inter] font-normal text-[14px] leading-none tracking-normal w-[630px] h-[17px] text-[#A1A1AA] mt-[12px]"
+        class="color-animation w-[630px] h-[17px] mt-[12px] font-[Inter] font-normal text-[14px] leading-none text-[#A1A1AA] transition-all duration-500 ease-in-out hover:text-[#D9F99D] hover:translate-x-2 hover:drop-shadow-[0_0_8px_#D9F99D66]"
       >
         Generated shades with Tailwind color names. Click a shade to copy its
         HEX background color.
       </div>
+
       <div class="w-[1240px] h-[1px] bg-[#27272A] mt-[40px]"></div>
+
       <div class="pt-[20px] flex justify-between">
-        <div
-          class="text-[#A1A1AA] font-['Inter'] font-medium text-[12px] leading-[100%] tracking-normal"
-        >
+        <div class="color-animation font-['Inter'] font-medium text-[12px] leading-[100%] tracking-normal text-[#A1A1AA]">
           100 → 950 · LIGHT TO DARK
         </div>
-        <div
-          class="text-[#A1A1AA] font-['Inter'] font-medium text-[12px] leading-[100%] tracking-normal"
-        >
+
+        <div class="color-animation font-['Inter'] font-medium text-[12px] leading-[100%] tracking-normal text-[#A1A1AA]">
           Ready to explore.
         </div>
       </div>
+
       <div
+        id="colorText"
         class="font-['Inter'] font-semibold text-[14px] leading-[100%] tracking-normal mt-[20px]"
       >
         Red
       </div>
-      <div class="w-[113.2px] h-[107px] flex items-center flex-col mt-[12px]">
-          <div class="w-[113.2px] h-[64px] bg-[Red] rounded-[12px] transition-all duration-300 hover:-translate-y-2 "></div>
-          <div class="text-[white] text-[12px] mt-[10px]">100</div>
-          <div class="text-[#A1A1AA] text-[9px]">#FAACK</div>
-      </div>
+
+      <div
+        id="colorContainer"
+        class="grid grid-cols-10 gap-x-[12px] gap-y-[20px] mt-[12px]"
+      ></div>
+
     </div>
   </body>
 </html>
+```
