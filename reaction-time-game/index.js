@@ -22,7 +22,7 @@ gameBox.addEventListener("click", () => {
         isWaiting = false;
         miss++;
 
-        gameBox.classList.remove("bg-green-500");
+        gameBox.classList.remove("bg-red-900");
         gameBox.classList.add("bg-[#27272A]");
 
         gameMessage.textContent = "Too soon!";
@@ -58,9 +58,11 @@ gameBox.addEventListener("click", () => {
 
     gameMessage.textContent = "Wait for green...";
     gameSubmessage.textContent = "Get ready";
+        gameBox.classList.remove("bg-[#27272A]");
+        gameBox.classList.add("bg-red-900");
 
     timeout = setTimeout(() => {
-        gameBox.classList.remove("bg-[#27272A]");
+        gameBox.classList.remove("bg-red-900");
         gameBox.classList.add("bg-green-500");
 
         gameMessage.textContent = "CLICK NOW!";
