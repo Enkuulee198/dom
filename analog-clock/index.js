@@ -5,7 +5,6 @@ const second = document.getElementById("second-zuu");
 const minute = document.getElementById("minute-zuu");
 const hour = document.getElementById("hour-zuu");
 
-// 60 ширхэг минутын зураас үүсгэх
 for (let i = 0; i < 60; i++) {
   const marker = document.createElement("div");
   marker.className = "absolute inset-0";
@@ -24,7 +23,6 @@ for (let i = 0; i < 60; i++) {
   markers.appendChild(marker);
 }
 
-// 1-12 хүртэлх тоо үүсгэх
 for (let i = 1; i <= 12; i++) {
   const number = document.createElement("span");
   number.textContent = i;
@@ -40,7 +38,6 @@ for (let i = 1; i <= 12; i++) {
   numbers.appendChild(number);
 }
 
-// Цагийг ажиллуулах
   const runtime = () => {
   const now = new Date();
 
